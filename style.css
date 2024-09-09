@@ -1,3 +1,4 @@
+/* all elements */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
 }
 
 textarea {
+  /* unset = all properties change to inherited values */
   all: unset;
 }
 
@@ -95,7 +97,7 @@ body {
   border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.stat__numbebr {
+.stat__number {
   color: #4d5457;
   font-weight: 600;
   font-size: 35px;
@@ -116,4 +118,39 @@ body {
   display: flex;
   justify-content: space-between;
   opacity: 0.4;
+}
+
+@media (max-width: 1150px) {
+  .container {
+    width: 85vw;
+    flex-direction: column;
+  }
+
+  .first-heading {
+    font-size: 7vw;
+  }
+  .stat {
+    padding: 15px;
+  }
+
+  .stat:nth-child(1),
+  .stat:nth-child(2),
+  .stat:nth-child(4) {
+    border: none;
+  }
+
+  .stat__number {
+    font-size: 20px;
+  }
+
+  .stat__number--limit {
+    color: red;
+  }
+
+  .footer {
+    width: initial;
+    /* changes with dimensions of page */
+    flex-direction: column;
+    align-items: center;
+  }
 }
